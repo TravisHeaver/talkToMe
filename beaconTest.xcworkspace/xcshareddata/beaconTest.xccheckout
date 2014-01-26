@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B8C5E041-5B04-4563-9589-2B1C65A6217C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>beaconTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5B32124-AC20-444C-9C09-5C95F725A7B2</key>
+		<string>https://github.com/TravisHeaver/talkToMe.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>beaconTest.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5B32124-AC20-444C-9C09-5C95F725A7B2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TravisHeaver/talkToMe.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5B32124-AC20-444C-9C09-5C95F725A7B2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5B32124-AC20-444C-9C09-5C95F725A7B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>beaconTest</string>
+		</dict>
+	</array>
+</dict>
+</plist>

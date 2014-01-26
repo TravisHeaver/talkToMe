@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F00D3BFF59346F78B4DBE64 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 780C6FF99C194368AFC78B71 /* libPods.a */; };
+		C43361061891F23100A439D7 /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43361051891F23100A439D7 /* BTLoginViewController.m */; };
+		C48D04AB1890AD2400EDCC20 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48D04AA1890AD2400EDCC20 /* Storyboard.storyboard */; };
+		C48D04AF1890AFCA00EDCC20 /* BTiPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48D04AE1890AFCA00EDCC20 /* BTiPadMainViewController.m */; };
+		C4A1FC86188CB67F003991A8 /* BTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A1FC85188CB67F003991A8 /* BTMainViewController.m */; };
+		C4A1FC8A188CB936003991A8 /* BTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A1FC89188CB936003991A8 /* BTConstants.m */; };
 		C4A854E9188A09BA00BD4D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A854E8188A09BA00BD4D0A /* Foundation.framework */; };
 		C4A854EB188A09BA00BD4D0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A854EA188A09BA00BD4D0A /* CoreGraphics.framework */; };
 		C4A854ED188A09BA00BD4D0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A854EC188A09BA00BD4D0A /* UIKit.framework */; };
@@ -14,13 +20,14 @@
 		C4A854F5188A09BA00BD4D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A854F4188A09BA00BD4D0A /* main.m */; };
 		C4A854F9188A09BA00BD4D0A /* BTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A854F8188A09BA00BD4D0A /* BTAppDelegate.m */; };
 		C4A854FC188A09BA00BD4D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A854FA188A09BA00BD4D0A /* Main.storyboard */; };
-		C4A854FF188A09BA00BD4D0A /* BTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A854FE188A09BA00BD4D0A /* BTViewController.m */; };
 		C4A85501188A09BA00BD4D0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A85500188A09BA00BD4D0A /* Images.xcassets */; };
 		C4A85508188A09BA00BD4D0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A85507188A09BA00BD4D0A /* XCTest.framework */; };
 		C4A85509188A09BA00BD4D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A854E8188A09BA00BD4D0A /* Foundation.framework */; };
 		C4A8550A188A09BA00BD4D0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A854EC188A09BA00BD4D0A /* UIKit.framework */; };
 		C4A85512188A09BA00BD4D0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A85510188A09BA00BD4D0A /* InfoPlist.strings */; };
 		C4A85514188A09BA00BD4D0A /* beaconTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A85513188A09BA00BD4D0A /* beaconTestTests.m */; };
+		C4A8551E188A248400BD4D0A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A8551D188A248400BD4D0A /* CoreLocation.framework */; };
+		C4A85520188A249B00BD4D0A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A8551F188A249B00BD4D0A /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780C6FF99C194368AFC78B71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43361041891F23100A439D7 /* BTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLoginViewController.h; sourceTree = "<group>"; };
+		C43361051891F23100A439D7 /* BTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
+		C48D04AA1890AD2400EDCC20 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C48D04AD1890AFCA00EDCC20 /* BTiPadMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTiPadMainViewController.h; sourceTree = "<group>"; };
+		C48D04AE1890AFCA00EDCC20 /* BTiPadMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTiPadMainViewController.m; sourceTree = "<group>"; };
+		C4A1FC84188CB67F003991A8 /* BTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMainViewController.h; sourceTree = "<group>"; };
+		C4A1FC85188CB67F003991A8 /* BTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTMainViewController.m; sourceTree = "<group>"; };
+		C4A1FC88188CB936003991A8 /* BTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTConstants.h; sourceTree = "<group>"; };
+		C4A1FC89188CB936003991A8 /* BTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTConstants.m; sourceTree = "<group>"; };
 		C4A854E5188A09BA00BD4D0A /* beaconTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A854E8188A09BA00BD4D0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4A854EA188A09BA00BD4D0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +62,15 @@
 		C4A854F7188A09BA00BD4D0A /* BTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAppDelegate.h; sourceTree = "<group>"; };
 		C4A854F8188A09BA00BD4D0A /* BTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTAppDelegate.m; sourceTree = "<group>"; };
 		C4A854FB188A09BA00BD4D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4A854FD188A09BA00BD4D0A /* BTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTViewController.h; sourceTree = "<group>"; };
-		C4A854FE188A09BA00BD4D0A /* BTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTViewController.m; sourceTree = "<group>"; };
 		C4A85500188A09BA00BD4D0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4A85506188A09BA00BD4D0A /* beaconTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A85507188A09BA00BD4D0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C4A8550F188A09BA00BD4D0A /* beaconTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "beaconTestTests-Info.plist"; sourceTree = "<group>"; };
 		C4A85511188A09BA00BD4D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4A85513188A09BA00BD4D0A /* beaconTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beaconTestTests.m; sourceTree = "<group>"; };
+		C4A8551D188A248400BD4D0A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C4A8551F188A249B00BD4D0A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E96BAEC54C024E25B2EF8DB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A85520188A249B00BD4D0A /* CoreBluetooth.framework in Frameworks */,
+				C4A8551E188A248400BD4D0A /* CoreLocation.framework in Frameworks */,
 				C4A854EB188A09BA00BD4D0A /* CoreGraphics.framework in Frameworks */,
 				C4A854ED188A09BA00BD4D0A /* UIKit.framework in Frameworks */,
 				C4A854E9188A09BA00BD4D0A /* Foundation.framework in Frameworks */,
+				2F00D3BFF59346F78B4DBE64 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +100,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C43361031891F21A00A439D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C43361041891F23100A439D7 /* BTLoginViewController.h */,
+				C43361051891F23100A439D7 /* BTLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C48D04AC1890AD4000EDCC20 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C4A854FA188A09BA00BD4D0A /* Main.storyboard */,
+				C4A1FC84188CB67F003991A8 /* BTMainViewController.h */,
+				C4A1FC85188CB67F003991A8 /* BTMainViewController.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		C48D04B01890B28500EDCC20 /* BTmanagement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BTmanagement;
+			sourceTree = "<group>";
+		};
 		C4A854DC188A09BA00BD4D0A = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +133,7 @@
 				C4A8550D188A09BA00BD4D0A /* beaconTestTests */,
 				C4A854E7188A09BA00BD4D0A /* Frameworks */,
 				C4A854E6188A09BA00BD4D0A /* Products */,
+				E96BAEC54C024E25B2EF8DB3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +149,13 @@
 		C4A854E7188A09BA00BD4D0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4A8551F188A249B00BD4D0A /* CoreBluetooth.framework */,
+				C4A8551D188A248400BD4D0A /* CoreLocation.framework */,
 				C4A854E8188A09BA00BD4D0A /* Foundation.framework */,
 				C4A854EA188A09BA00BD4D0A /* CoreGraphics.framework */,
 				C4A854EC188A09BA00BD4D0A /* UIKit.framework */,
 				C4A85507188A09BA00BD4D0A /* XCTest.framework */,
+				780C6FF99C194368AFC78B71 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,12 +163,13 @@
 		C4A854EE188A09BA00BD4D0A /* beaconTest */ = {
 			isa = PBXGroup;
 			children = (
+				C43361031891F21A00A439D7 /* Login */,
+				C48D04AC1890AD4000EDCC20 /* iPhone */,
 				C4A854F7188A09BA00BD4D0A /* BTAppDelegate.h */,
 				C4A854F8188A09BA00BD4D0A /* BTAppDelegate.m */,
-				C4A854FA188A09BA00BD4D0A /* Main.storyboard */,
-				C4A854FD188A09BA00BD4D0A /* BTViewController.h */,
-				C4A854FE188A09BA00BD4D0A /* BTViewController.m */,
 				C4A85500188A09BA00BD4D0A /* Images.xcassets */,
+				C48D04B01890B28500EDCC20 /* BTmanagement */,
+				C4FF900E188F86EF00C86218 /* iPad */,
 				C4A854EF188A09BA00BD4D0A /* Supporting Files */,
 			);
 			path = beaconTest;
@@ -130,6 +182,8 @@
 				C4A854F1188A09BA00BD4D0A /* InfoPlist.strings */,
 				C4A854F4188A09BA00BD4D0A /* main.m */,
 				C4A854F6188A09BA00BD4D0A /* beaconTest-Prefix.pch */,
+				C4A1FC88188CB936003991A8 /* BTConstants.h */,
+				C4A1FC89188CB936003991A8 /* BTConstants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +206,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C4FF900E188F86EF00C86218 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				C48D04AA1890AD2400EDCC20 /* Storyboard.storyboard */,
+				C48D04AD1890AFCA00EDCC20 /* BTiPadMainViewController.h */,
+				C48D04AE1890AFCA00EDCC20 /* BTiPadMainViewController.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4A85517188A09BA00BD4D0A /* Build configuration list for PBXNativeTarget "beaconTest" */;
 			buildPhases = (
+				265BE5FB1A7F41C080887916 /* Check Pods Manifest.lock */,
 				C4A854E1188A09BA00BD4D0A /* Sources */,
 				C4A854E2188A09BA00BD4D0A /* Frameworks */,
 				C4A854E3188A09BA00BD4D0A /* Resources */,
+				5FFC984D1AAE49FDA5350CF6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +266,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Travis Heaver";
 				TargetAttributes = {
+					C4A854E4188A09BA00BD4D0A = {
+						DevelopmentTeam = ZHVZ8Z42A2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					C4A85505188A09BA00BD4D0A = {
 						TestTargetID = C4A854E4188A09BA00BD4D0A;
 					};
@@ -230,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A85501188A09BA00BD4D0A /* Images.xcassets in Resources */,
+				C48D04AB1890AD2400EDCC20 /* Storyboard.storyboard in Resources */,
 				C4A854F3188A09BA00BD4D0A /* InfoPlist.strings in Resources */,
 				C4A854FC188A09BA00BD4D0A /* Main.storyboard in Resources */,
 			);
@@ -245,14 +320,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		265BE5FB1A7F41C080887916 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5FFC984D1AAE49FDA5350CF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4A854E1188A09BA00BD4D0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A854FF188A09BA00BD4D0A /* BTViewController.m in Sources */,
 				C4A854F9188A09BA00BD4D0A /* BTAppDelegate.m in Sources */,
 				C4A854F5188A09BA00BD4D0A /* main.m in Sources */,
+				C4A1FC8A188CB936003991A8 /* BTConstants.m in Sources */,
+				C43361061891F23100A439D7 /* BTLoginViewController.m in Sources */,
+				C48D04AF1890AFCA00EDCC20 /* BTiPadMainViewController.m in Sources */,
+				C4A1FC86188CB67F003991A8 /* BTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,26 +487,34 @@
 		};
 		C4A85518188A09BA00BD4D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96BAEC54C024E25B2EF8DB3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beaconTest/beaconTest-Prefix.pch";
 				INFOPLIST_FILE = "beaconTest/beaconTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		C4A85519188A09BA00BD4D0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96BAEC54C024E25B2EF8DB3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beaconTest/beaconTest-Prefix.pch";
 				INFOPLIST_FILE = "beaconTest/beaconTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -461,6 +580,7 @@
 				C4A85519188A09BA00BD4D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4A8551A188A09BA00BD4D0A /* Build configuration list for PBXNativeTarget "beaconTestTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +589,7 @@
 				C4A8551C188A09BA00BD4D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

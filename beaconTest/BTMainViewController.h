@@ -10,4 +10,7 @@
 
 @interface BTMainViewController : UIViewController
 
+@property (nonatomic, strong) NSNumber *major;
+@property (nonatomic, strong) NSNumber *minor;
+
 @end
