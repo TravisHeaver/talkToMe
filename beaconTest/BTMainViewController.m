@@ -10,11 +10,12 @@
 #import "CoreBluetooth/CoreBluetooth.h"
 #import "CoreLocation/CoreLocation.h"
 #import "BTConstants.h"
+#import "BTTalkToViewController.h"
 
-@interface BTMainViewController () <CBPeripheralManagerDelegate, CLLocationManagerDelegate, UIAlertViewDelegate, UIApplicationDelegate>
+@interface BTMainViewController () <CBPeripheralManagerDelegate, CLLocationManagerDelegate, UIAlertViewDelegate, UIApplicationDelegate, UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *startSendingButton;
 @property (strong, nonatomic) IBOutlet UIButton *startListeningButton;
-@property (strong, nonatomic) IBOutlet UILabel *feedbackLabel;
+@property (strong, nonatomic) IBOutlet UITextView *messageToSendTextView;
 
 @property (strong, nonatomic) UILocalNotification *localNotification;
 @property (nonatomic) NSNumber *numberOfUsers;
@@ -30,6 +31,9 @@
 @property (nonatomic) BOOL isBraudcasting;
 @property (nonatomic) BOOL isSearching;
 
+@property (strong, nonatomic) NSMutableArray *nearByUsersMajorValues;
+
+@property (strong, nonatomic) NSMutableArray *nearByUsers;
 //@property (nonatomic, strong) NSNumber *major;
 //@property (nonatomic, strong) NSNumber *minor;
 
@@ -52,10 +56,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-//    self.localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber];
-
-//    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
+    self.messageToSendTextView.delegate = self;
     [self requestUserMajorMinor];
 }
 
@@ -64,6 +65,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - lazy instantiation
+-(NSMutableArray *)nearByUsers
+{
+    if (!_nearByUsers) {
+        _nearByUsers = [[NSMutableArray alloc] init];
+    }
+    return _nearByUsers;
+}
+-(NSMutableArray *)nearByUsersMajorValues
+{
+    if (!_nearByUsersMajorValues) {
+        _nearByUsersMajorValues = [[NSMutableArray alloc] init];
+    }
+    return _nearByUsersMajorValues;
+}
+
 -(void)createRegion
 {
     if (self.beaconRegion) return;
@@ -140,15 +158,7 @@
     NSLog(@"Stoped braudcasting");
     self.startSendingButton.backgroundColor = [UIColor yellowColor];
 }
-- (IBAction)startSendingButtonPressed:(id)sender {
-    if (!self.isBraudcasting) {
-        [self startBraudcasting];
-        
-    }
-    else{
-        [self stopBraudcasting];
-    }
-}
+
 -(void)lookForBeacons
 {
     NSLog(@"starting to look for beacons");
@@ -198,20 +208,7 @@
 {
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
-- (IBAction)startListeningButtonPressed:(id)sender {
-    if (self.isSearching) {
-        [self stopListening];
-        [self stopRanging];
-        self.startListeningButton.backgroundColor = [UIColor yellowColor];
-        self.isSearching = NO;
-    }
-    else{
-        [self startListening];
-        [self startRanging];
-        self.startListeningButton.backgroundColor = [UIColor greenColor];
-        self.isSearching = YES;
-    }
-}
+
 #pragma mark - Beacon advertising delegate methods
 - (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheralManager error:(NSError *)error
 {
@@ -259,18 +256,43 @@
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    NSLog(@"did range beacons");
+    
+//    [self.nearByUsers removeAllObjects];
+    
+//    NSLog(@"did range beacons: %@", beacons);
     CLBeacon *beacon = [[CLBeacon alloc] init];
     NSUInteger numberOfBeacons = [beacons count];
-    
+    NSUUID *TestproximityUUID = [[NSUUID alloc] initWithUUIDString:kUUIDtalkToMe];
     for (NSInteger i = 0; i<numberOfBeacons; i++) {
         beacon = [beacons objectAtIndex:i];
-        NSLog(@"The UUID is: %@", beacon.proximityUUID.UUIDString);
-        NSLog(@"The major value is: %@", beacon.major);
-        NSLog(@"The minor value is: %@", beacon.minor);
+//        NSLog(@"The UUID is: %@", beacon.proximityUUID.UUIDString);
+  //      NSLog(@"The major value is: %@", beacon.major);
+    //    NSLog(@"The minor value is: %@", beacon.minor);
         
-        self.feedbackLabel.text = beacon.proximityUUID.UUIDString;
+        
+ //       self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:kTalkToMeIdentifier];
+        
+  //      NSLog(@"TestProximity UUID: %@", TestproximityUUID);
+  //      NSLog(@"beacon proxi  UUID: %@", beacon.proximityUUID);
+        
+        if ([beacon.proximityUUID isEqual:TestproximityUUID]) {
+   //         NSLog(@"true so far....");
+            
+  //          NSLog(@"beacon is: %@", beacon);
+  //          NSNumber *majorValueAsNumber = [NSNumber numberWithInt:[beacon.m intValue]];
+            //NSLog(@"major value as int: %@", majorValueAsNumber);
+            
+            if (![self.nearByUsersMajorValues containsObject:beacon.major]) {
+                //[self.nearByUsers addObject:beacon];
+                [self.nearByUsersMajorValues addObject:beacon.major];
+                
+                NSLog(@"added beacon");
+                NSLog(@"the near by user array is now: %@", self.nearByUsersMajorValues);
+            }
+    
+        }
     }
+//    NSLog(@"all the nearby beacons with the UUID are: %@", self.nearByUsers);
 }
 #pragma mark - Beacon enter region delegate
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLBeaconRegion *)region
@@ -281,20 +303,20 @@
     NSLog(@"The UUID major: %@i", region.minor);
     NSLog(@"entered a reagon: %@",region.identifier);
     
-    
-    self.feedbackLabel.text = [[NSString alloc] initWithFormat:@"entered region: %@",region.identifier];
-    
+
     if ([region isEqual:self.beaconRegion]) {
         NSLog(@"they are equal");
     }
     
     //set notification to user
     [self setNotification:region];
+    
+    
 }
+
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
     NSLog(@"did exit reagion: %@",region.identifier);
-    self.feedbackLabel.text = [[NSString alloc] initWithFormat:@"exited region: %@",region.identifier];
 }
 
 #pragma mark - local notification
@@ -375,4 +397,59 @@
         self.startSendingButton.enabled = true;
     }];
 }
+#pragma mark - text view delegate
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        [self.messageToSendTextView resignFirstResponder];
+        [[PFUser currentUser] setObject:self.messageToSendTextView.text forKey:@"message"];
+        [[PFUser currentUser] saveInBackground];
+        //[self.navigationController popViewControllerAnimated:YES];
+        [self.messageToSendTextView resignFirstResponder];
+        return NO;
+    }
+    else return YES;
+}
+#pragma mark - IBactiots
+- (IBAction)startListeningButtonPressed:(id)sender {
+    if (self.isSearching) {
+        [self stopListening];
+        [self stopRanging];
+        self.startListeningButton.backgroundColor = [UIColor yellowColor];
+        self.isSearching = NO;
+    }
+    else{
+        [self startListening];
+        [self startRanging];
+        self.startListeningButton.backgroundColor = [UIColor greenColor];
+        self.isSearching = YES;
+    }
+}
+- (IBAction)startSendingButtonPressed:(id)sender {
+    if (!self.isBraudcasting) {
+        [self startBraudcasting];
+        
+    }
+    else{
+        [self stopBraudcasting];
+    }
+}
+- (IBAction)talkToBarButtonPressed:(UIBarButtonItem *)sender {
+    //segue to table view, need to send an array of all the users that are near
+    
+    [self performSegueWithIdentifier:@"mainToTalkToSegue" sender:nil];
+}
+#pragma mark segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"mainToTalkToSegue"]) {
+        BTTalkToViewController *nextViewControler = segue.destinationViewController;
+        
+        NSLog(@"about to segue, users to send are: %@", self.nearByUsersMajorValues);
+        nextViewControler.nearByUsers = self.nearByUsersMajorValues;
+//        nextViewControler.delegate
+    }
+}
+
 @end

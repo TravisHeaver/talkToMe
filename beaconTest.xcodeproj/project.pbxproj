@@ -28,6 +28,7 @@
 		C4A85514188A09BA00BD4D0A /* beaconTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A85513188A09BA00BD4D0A /* beaconTestTests.m */; };
 		C4A8551E188A248400BD4D0A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A8551D188A248400BD4D0A /* CoreLocation.framework */; };
 		C4A85520188A249B00BD4D0A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A8551F188A249B00BD4D0A /* CoreBluetooth.framework */; };
+		C4B430321894F6C300FC06AC /* BTTalkToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B430311894F6C300FC06AC /* BTTalkToViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		C4A85513188A09BA00BD4D0A /* beaconTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beaconTestTests.m; sourceTree = "<group>"; };
 		C4A8551D188A248400BD4D0A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4A8551F188A249B00BD4D0A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C4B430301894F6C300FC06AC /* BTTalkToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTalkToViewController.h; sourceTree = "<group>"; };
+		C4B430311894F6C300FC06AC /* BTTalkToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTalkToViewController.m; sourceTree = "<group>"; };
 		E96BAEC54C024E25B2EF8DB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C4A854FA188A09BA00BD4D0A /* Main.storyboard */,
-				C4A1FC84188CB67F003991A8 /* BTMainViewController.h */,
-				C4A1FC85188CB67F003991A8 /* BTMainViewController.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -163,6 +164,8 @@
 		C4A854EE188A09BA00BD4D0A /* beaconTest */ = {
 			isa = PBXGroup;
 			children = (
+				C4CC79A31895A31E00D3D5D6 /* main */,
+				C4B4302F1894F6AE00FC06AC /* talk to */,
 				C43361031891F21A00A439D7 /* Login */,
 				C48D04AC1890AD4000EDCC20 /* iPhone */,
 				C4A854F7188A09BA00BD4D0A /* BTAppDelegate.h */,
@@ -204,6 +207,24 @@
 				C4A85510188A09BA00BD4D0A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4B4302F1894F6AE00FC06AC /* talk to */ = {
+			isa = PBXGroup;
+			children = (
+				C4B430301894F6C300FC06AC /* BTTalkToViewController.h */,
+				C4B430311894F6C300FC06AC /* BTTalkToViewController.m */,
+			);
+			name = "talk to";
+			sourceTree = "<group>";
+		};
+		C4CC79A31895A31E00D3D5D6 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C4A1FC84188CB67F003991A8 /* BTMainViewController.h */,
+				C4A1FC85188CB67F003991A8 /* BTMainViewController.m */,
+			);
+			name = main;
 			sourceTree = "<group>";
 		};
 		C4FF900E188F86EF00C86218 /* iPad */ = {
@@ -361,6 +382,7 @@
 				C4A854F9188A09BA00BD4D0A /* BTAppDelegate.m in Sources */,
 				C4A854F5188A09BA00BD4D0A /* main.m in Sources */,
 				C4A1FC8A188CB936003991A8 /* BTConstants.m in Sources */,
+				C4B430321894F6C300FC06AC /* BTTalkToViewController.m in Sources */,
 				C43361061891F23100A439D7 /* BTLoginViewController.m in Sources */,
 				C48D04AF1890AFCA00EDCC20 /* BTiPadMainViewController.m in Sources */,
 				C4A1FC86188CB67F003991A8 /* BTMainViewController.m in Sources */,
